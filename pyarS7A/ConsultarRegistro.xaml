@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="pyarS7A.ConsultarRegistro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LSTA DE USUARIO" FontSize="24" HorizontalTextAlignment="Center"/>
+            <ListView x:Name="ListaEstudiantes" ItemSelected="OnSelection">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nombre}" Detail="{Binding Usuario}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnRegresar" Text="REGRESAR" Clicked="btnRegresar_Clicked" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
